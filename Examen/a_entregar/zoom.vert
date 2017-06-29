@@ -23,5 +23,5 @@ void main()
 	vec4 trans = modelViewProjectionMatrix*vec4(vertex, 1);
 	float x = (trans.x/trans.w)*0.5*abs(sin(time));
 	float y = (trans.y/trans.w)*0.5*abs(sin(time));
-	gl_Position = vec4(x*trans.w,y*trans.w,trans.z,trans.w);
+	gl_Position = vec4(x*trans.w,y*trans.w,trans.z,trans.w); //No caldria tornar a passar-ho a Clip Space com vaig fer, millor deixar-ho en el SCO que està.
 }
